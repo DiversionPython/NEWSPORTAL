@@ -85,7 +85,7 @@ class PostCreateAR(CreateView):
 
     def form_valid(self, form):
         post = form.save(commit=True)
-        post.category = "AR"
+        post.categoryType = "AR"
         return super().form_valid(form)
 
 class PostCreateNW(CreateView):
@@ -98,7 +98,7 @@ class PostCreateNW(CreateView):
 
     def form_valid(self, form):
         post = form.save(commit=True)
-        post.category = "NW"
+        post.categoryType = "NW"
         return super().form_valid(form)
 
 
